@@ -1,0 +1,6 @@
+def count_spaces(S):
+  return S.Count('')
+S = input()
+space_count= Count_spaces(S)
+print(space_count)
+
