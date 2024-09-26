@@ -1,0 +1,31 @@
+def prime_factors(num):
+  factors = {}
+  i = 2
+  while i * i <= num:
+    count = 0
+    while num % i == 0:
+       count ++ 1
+       num // = i
+     if num > 1:
+         factors[num] = 1
+      return factors
+  def sum_prime_factor_indices(n,arr,num):
+  if n == 0 or not arr:
+     print(-1)
+     return
+ factorization of num factors = prime_factors(num)
+ total_sum = 0
+ prime_found = False
+ for prime, exponent in factors.items():
+ if prime < n:
+    total_sum += exponent * arr[prime]
+    prime_found = True
+  if not prime_found:
+     print(0)
+  else:
+     print(total_sum)
+  n = int(input())
+  arr = list(map(int,input().split()))
+  num = int(input())
+  sum_prime_factor_indices(n,arr,num)
+  
